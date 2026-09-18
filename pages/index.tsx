@@ -40,7 +40,7 @@ const Home: NextPage = () => {
 				<TopAgents />
 				<Events />
 				<CommunityBoards />
-			</Stack>
+			</Stack> 
 		);
 	}
 };
