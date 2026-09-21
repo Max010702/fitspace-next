@@ -34,9 +34,11 @@ const TopAgents = (props: TopAgentsProps) => {
 		variables: { input: initialInput },
 		notifyOnNetworkStatusChange: true,
 		onCompleted: (data: T) => {
-			setTopAgents(data?.getAgents.list);
+			setTopAgents(data?.getAgents?.list);
 		},
 	});
+	if (getAgentsError) console.log('getAgentsError:', getAgentsError);
+
 	/** HANDLERS **/
 
 	if (device === 'mobile') {
@@ -127,6 +129,3 @@ TopAgents.defaultProps = {
 };
 
 export default TopAgents;
-function setTrendProperties(list: any) {
-	throw new Error('Function not implemented.');
-}
