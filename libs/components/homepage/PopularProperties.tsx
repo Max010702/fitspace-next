@@ -34,7 +34,7 @@ const PopularProperties = (props: PopularPropertiesProps) => {
 		variables: { input: initialInput },
 		notifyOnNetworkStatusChange: true,
 		onCompleted: (data: T) => {
-			setTrendProperties(data?.getProperties.list);
+			setPopularProperties(data?.getProperties.list);
 		},
 	});
 	/** HANDLERS **/
@@ -131,6 +131,3 @@ PopularProperties.defaultProps = {
 };
 
 export default PopularProperties;
-function setTrendProperties(list: any) {
-	throw new Error('Function not implemented.');
-}
