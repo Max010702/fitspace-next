@@ -77,7 +77,7 @@ const TopPropertyCard = (props: TopPropertyCardProps) => {
 			</Stack>
 		);
 	} else {
-		function likePropertyHandler(user: CustomJwtPayload, _id: string) {
+		const likePropertyHandler = (user: CustomJwtPayload, _id: string) => {
 			throw new Error('Function not implemented.');
 		}
 
