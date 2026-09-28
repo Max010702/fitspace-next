@@ -181,7 +181,7 @@ const AgentList: NextPage = ({ initialInput, ...props }: any) => {
 							</div>
 						) : (
 							agents.map((agent: Member) => {
-								return <AgentCard agent={agent} key={agent._id} likeMemberHandler={undefined} />;
+								return <AgentCard agent={agent} key={agent._id} likeMemberHandler={likeMemberHandler} />;
 							})
 						)}
 					</Stack>
